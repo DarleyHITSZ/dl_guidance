@@ -1,75 +1,119 @@
-# 深度学习实验指南（dl_guidance）
+# Custom Deep Learning Framework
 
-## 项目概述
-本项目包含一系列深度学习实验实现，涵盖多层感知机（MLP）、卷积神经网络（CNN）、Transformer及变体（如Mamba）等经典模型，旨在帮助理解深度学习核心算法的原理与实现细节。
+A lightweight, NumPy-based deep learning framework implementing core neural network components, including convolutional layers, fully connected layers, activation functions, and loss functions. Designed for educational purposes to demonstrate the fundamentals of deep learning architectures and backpropagation.
 
-## 目录结构
-```
-dl_guidance/
-├── LICENSE               # 许可证信息
-├── lab1/                 # MLP实验
-│   └── lab1-mlp/
-│       ├── mlp/          # MLP层实现
-│       ├── requirements.txt  # 依赖列表
-│       └── README.md     # MLP实验说明
-├── lab2/                 # CNN实验
-│   └── cnn_mnist.py      # 基于MNIST的CNN实现
-├── lab4/                 # Transformer及变体实验
-│   └── lab4-transformer/
-│       ├── mamba_model.py  # Mamba块实现
-│       ├── transformer_model.py  # Transformer编码器实现
-│       ├── download_dataset.py   # 数据集下载脚本
-│       ├── tokenizers.py         # 分词器工具
-│       └── EXPERIMENT_GUIDE.md   # 实验指南
-```
+## Overview
 
-## 环境要求
-### 基础依赖
-- Python 3.7+
-- 核心库：
-  ```
-  numpy>=1.21
-  pandas
-  scikit-learn
-  matplotlib
-  ```
-### 特定实验依赖
-- lab2（CNN）：`tensorflow`
-- lab4（Transformer/Mamba）：`torch`、`json`（内置）
+This framework provides modular implementations of key deep learning building blocks, allowing users to construct and train neural networks from scratch. It includes:
+- Convolutional layers (`Conv2D`) with efficient `im2col`/`col2im` operations
+- Pooling layers (`MaxPool2D`)
+- Fully connected layers (`Dense`) with various weight initializations
+- Activation functions (ReLU, Softmax)
+- Loss functions (Cross-Entropy)
+- Utility layers (Flatten)
 
-可通过以下命令安装基础依赖：
+## Installation
+
+### Prerequisites
+- Python 3.6+
+- NumPy
+- Matplotlib
+- TensorFlow (for data loading, optional)
+
+### Setup
+Clone the repository and install dependencies:
 ```bash
-pip install -r lab1/lab1-mlp/requirements.txt
+git clone <repository-url>
+cd <repository-directory>
+pip install numpy matplotlib tensorflow
 ```
 
-## 实验内容
+## Usage Example
 
-### 1. MLP实验（lab1）
-- 基于NumPy实现多层感知机（MLP）
-- 数据集：波士顿房价数据集（来自OpenML）
-- 包含自定义层实现（`mlp/layers.py`），支持前向传播、反向传播及参数更新
+### Training a CNN on MNIST
+```python
+import numpy as np
+from dl_guidance.lab2.cnn_mnist import (
+    Conv2D, MaxPool2D, Flatten, Dense,
+    ReLU, Softmax, CrossEntropyLoss
+)
 
-### 2. CNN实验（lab2）
-- 基于NumPy实现卷积神经网络（CNN），用于MNIST手写数字识别
-- 包含核心组件：
-  - 激活函数（ReLU、Softmax）
-  - 损失函数（交叉熵）
-  - 卷积层、池化层、全连接层
-  - 自定义`im2col`/`col2im`实现高效卷积计算
+# Load and preprocess data (example using TensorFlow)
+(x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
+x_train = x_train.reshape(-1, 1, 28, 28) / 255.0
+x_test = x_test.reshape(-1, 1, 28, 28) / 255.0
 
-### 3. Transformer及变体实验（lab4）
-- 实现Transformer编码器及Mamba模型
-- 支持量化实验，非量化模型训练命令：
-  ```bash
-  python training_and_testing.py --device cpu --model transformer --pos_encoding sine --tokenizer bpe --name non_quantized
-  ```
-- 数据集处理：支持数据集下载与预处理（`download_dataset.py`）
-- 分词器：支持BPE分词器保存与加载（`tokenizers.py`）
+# Define model architecture
+model = [
+    Conv2D(in_channels=1, out_channels=16, kernel_size=3, stride=1, padding=1),
+    ReLU(),
+    MaxPool2D(pool_size=2, stride=2),
+    Flatten(),
+    Dense(in_features=14*14*16, out_features=100),
+    ReLU(),
+    Dense(in_features=100, out_features=10),
+    Softmax()
+]
 
-## 致谢
-- 波士顿房价数据集来自OpenML
-- 实验实现参考了多个在线深度学习教程与资源
-- 部分模型实现基于PyTorch框架
+# Loss function
+criterion = CrossEntropyLoss()
 
-## 许可证
-本项目遵循开源许可证条款，详情参见[LICENSE](LICENSE)。贡献者需遵守许可证中关于贡献、版权许可及专利许可的相关规定。
+# Training loop
+epochs = 10
+batch_size = 32
+learning_rate = 0.01
+
+for epoch in range(epochs):
+    total_loss = 0
+    for i in range(0, len(x_train), batch_size):
+        # Get batch
+        x_batch = x_train[i:i+batch_size]
+        y_batch = y_train[i:i+batch_size]
+        
+        # Forward pass
+        out = x_batch
+        for layer in model:
+            out = layer.forward(out)
+        
+        # Calculate loss
+        loss = criterion.forward(out, y_batch)
+        total_loss += loss
+        
+        # Backward pass
+        dout = criterion.backward()
+        for layer in reversed(model):
+            dout = layer.backward(dout)
+        
+        # Update parameters (implement optimizer or update in layers)
+        for layer in model:
+            if hasattr(layer, 'W'):  # Check if layer has weights
+                layer.W -= learning_rate * layer.dW
+                layer.b -= learning_rate * layer.db
+    
+    print(f"Epoch {epoch+1}/{epochs}, Loss: {total_loss/len(x_train)*batch_size:.4f}")
+```
+
+## Key Components
+
+### Layers
+- `Conv2D`: Convolutional layer with configurable kernel size, stride, and padding
+- `MaxPool2D`: Max pooling layer for spatial downsampling
+- `Dense`: Fully connected layer with He/Xavier initialization options
+- `Flatten`: Utility layer to flatten multi-dimensional tensors
+
+### Activations
+- `ReLU`: Rectified Linear Unit activation with backward pass
+- `Softmax`: Stable softmax implementation for classification tasks
+
+### Loss Functions
+- `CrossEntropyLoss`: Cross-entropy loss with support for one-hot encoded labels
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+- Inspired by fundamental deep learning concepts from "Deep Learning" by Ian Goodfellow et al.
+- MNIST dataset handling uses TensorFlow's utility functions for simplicity
+
+## Contributing
+Contributions are welcome! Please fork the repository and submit pull requests for any improvements or additional features.
