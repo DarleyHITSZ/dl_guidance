@@ -1,0 +1,70 @@
+=== 模型性能对比实验 ===
+========================================
+超参数配置:
+  seq_len: 30
+  batch_size: 32
+  hidden_size: 128
+  state_size: 64
+  kernel_size: 4
+  learning_rate: 0.001
+  epochs: 10
+  stock_symbol: AAPL
+  feature_cols: ['Close']
+========================================
+
+加载数据...
+Loading existing data from data\AAPL.csv
+Detected special CSV format, skipping invalid rows...
+数据加载完成
+训练样本数: 2784
+测试样本数: 672
+========================================
+
+=== 训练 min_gru 模型 ===
+Epoch 1/10 - Train Loss: 0.015308 - Val Loss: 0.306926 - Time: 2.19s
+Epoch 2/10 - Train Loss: 0.018458 - Val Loss: 0.291770 - Time: 2.14s
+Epoch 3/10 - Train Loss: 0.019171 - Val Loss: 0.290122 - Time: 2.17s
+Epoch 4/10 - Train Loss: 0.019161 - Val Loss: 0.289200 - Time: 2.14s
+Epoch 5/10 - Train Loss: 0.019107 - Val Loss: 0.288284 - Time: 2.11s
+Epoch 6/10 - Train Loss: 0.019049 - Val Loss: 0.287325 - Time: 2.14s
+Epoch 7/10 - Train Loss: 0.018989 - Val Loss: 0.286310 - Time: 2.13s
+Epoch 8/10 - Train Loss: 0.018926 - Val Loss: 0.285230 - Time: 2.08s
+Epoch 9/10 - Train Loss: 0.018860 - Val Loss: 0.284074 - Time: 2.26s
+Epoch 10/10 - Train Loss: 0.018789 - Val Loss: 0.282832 - Time: 2.05s
+
+=== 训练 mamba 模型 ===
+Epoch 1/10 - Train Loss: 0.010849 - Val Loss: 0.204717 - Time: 2.10s
+Epoch 2/10 - Train Loss: 0.015355 - Val Loss: 0.160642 - Time: 2.10s
+Epoch 3/10 - Train Loss: 0.012667 - Val Loss: 0.113283 - Time: 2.17s
+Epoch 4/10 - Train Loss: 0.009399 - Val Loss: 0.063306 - Time: 2.07s
+Epoch 5/10 - Train Loss: 0.005989 - Val Loss: 0.023083 - Time: 2.05s
+Epoch 6/10 - Train Loss: 0.003091 - Val Loss: 0.005142 - Time: 2.11s
+Epoch 7/10 - Train Loss: 0.001259 - Val Loss: 0.001589 - Time: 2.05s
+Epoch 8/10 - Train Loss: 0.000450 - Val Loss: 0.001132 - Time: 2.06s
+Epoch 9/10 - Train Loss: 0.000210 - Val Loss: 0.001065 - Time: 2.03s
+Epoch 10/10 - Train Loss: 0.000154 - Val Loss: 0.001053 - Time: 2.05s
+
+========================================
+=== 模型性能对比报告 ===
+========================================
+
+1. 训练时间对比:
+   MinGRU总训练时间: 21.40秒
+   Mamba总训练时间: 20.81秒
+   Mamba比MinGRU快: 0.59秒 (2.8%)
+
+2. 最终损失对比 (MSE):
+   MinGRU训练损失: 0.018789
+   Mamba训练损失: 0.000154
+   MinGRU验证损失: 0.282832
+
+3. 预测性能对比 (原始尺度):
+   MinGRU MSE: 10263.69
+   Mamba MSE: 38.21
+   MinGRU RMSE: 101.31
+   Mamba RMSE: 6.18
+   MinGRU MAE: 99.72
+   Mamba MAE: 5.13
+
+可视化结果已保存到 'mamba_vs_mingru_comparison.png'
+对比结果数据已保存到 'benchmark_results.csv'

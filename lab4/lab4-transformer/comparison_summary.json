@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-01-03 16:55:51",
+  "experiments": [
+    {
+      "model": "transformer",
+      "pos_encoding": "sine",
+      "tokenizer": "bpe",
+      "quantize": null,
+      "description": "\u539f\u59cbTransformer (\u6b63\u5f26\u4f4d\u7f6e\u7f16\u7801, BPE\u5206\u8bcd\u5668)"
+    },
+    {
+      "model": "transformer",
+      "pos_encoding": "rope",
+      "tokenizer": "bpe",
+      "quantize": null,
+      "description": "Transformer+RoPE (\u65cb\u8f6c\u4f4d\u7f6e\u7f16\u7801)"
+    },
+    {
+      "model": "transformer",
+      "pos_encoding": "sine",
+      "tokenizer": "sentencepiece",
+      "quantize": null,
+      "description": "Transformer+SentencePiece (SentencePiece\u5206\u8bcd\u5668)"
+    },
+    {
+      "model": "mamba",
+      "pos_encoding": "sine",
+      "tokenizer": "bpe",
+      "quantize": null,
+      "description": "Mamba\u6a21\u578b"
+    }
+  ],
+  "results": [
+    {
+      "experiment": {
+        "model": "transformer",
+        "pos_encoding": "sine",
+        "tokenizer": "bpe",
+        "quantize": null,
+        "description": "\u539f\u59cbTransformer (\u6b63\u5f26\u4f4d\u7f6e\u7f16\u7801, BPE\u5206\u8bcd\u5668)"
+      },
+      "success": true,
+      "result": {
+        "model": "transformer",
+        "pos_encoding": "sine",
+        "tokenizer": "bpe",
+        "quantize": null,
+        "device": "cpu",
+        "batch_size": 8,
+        "epochs": 5,
+        "d_model": 128,
+        "num_layers": 2,
+        "final_test_loss": 4.783655643463135,
+        "training_time_seconds": 1.1232123374938965,
+        "memory_usage_mb": 0,
+        "inference_time_ms": 2.151966094970703,
+        "train_losses": [
+          5.596295400099321,
+          5.100722703066739,
+          4.872477141293612,
+          4.701233993877064,
+          4.580686655911532
+        ],
+        "test_losses": [
+          5.431977272033691,
+          5.211141586303711,
+          5.060032367706299,
+          4.9464945793151855,
+          4.783655643463135
+        ]
+      }
+    },
+    {
+      "experiment": {
+        "model": "transformer",
+        "pos_encoding": "rope",
+        "tokenizer": "bpe",
+        "quantize": null,
+        "description": "Transformer+RoPE (\u65cb\u8f6c\u4f4d\u7f6e\u7f16\u7801)"
+      },
+      "success": true,
+      "result": {
+        "model": "transformer",
+        "pos_encoding": "rope",
+        "tokenizer": "bpe",
+        "quantize": null,
+        "device": "cpu",
+        "batch_size": 8,
+        "epochs": 5,
+        "d_model": 128,
+        "num_layers": 2,
+        "final_test_loss": 4.621060371398926,
+        "training_time_seconds": 1.1385235786437988,
+        "memory_usage_mb": 0,
+        "inference_time_ms": 2.2056102752685547,
+        "train_losses": [
+          5.607710838317871,
+          5.103710261258212,
+          4.840125344016335,
+          4.581111474470659,
+          4.314731988039884
+        ],
+        "test_losses": [
+          5.417725563049316,
+          5.232909202575684,
+          5.055157661437988,
+          4.842175006866455,
+          4.621060371398926
+        ]
+      }
+    },
+    {
+      "experiment": {
+        "model": "transformer",
+        "pos_encoding": "sine",
+        "tokenizer": "sentencepiece",
+        "quantize": null,
+        "description": "Transformer+SentencePiece (SentencePiece\u5206\u8bcd\u5668)"
+      },
+      "success": true,
+      "result": {
+        "model": "transformer",
+        "pos_encoding": "sine",
+        "tokenizer": "sentencepiece",
+        "quantize": null,
+        "device": "cpu",
+        "batch_size": 8,
+        "epochs": 5,
+        "d_model": 128,
+        "num_layers": 2,
+        "final_test_loss": 3.0780105590820312,
+        "training_time_seconds": 1.766345500946045,
+        "memory_usage_mb": 0,
+        "inference_time_ms": 2.558469772338867,
+        "train_losses": [
+          4.032426639036699,
+          3.515760378404097,
+          3.3163633129813452,
+          3.2423231168226763,
+          3.1255099556662818
+        ],
+        "test_losses": [
+          3.4995555877685547,
+          3.356635332107544,
+          3.2593162059783936,
+          3.1656365394592285,
+          3.0780105590820312
+        ]
+      }
+    },
+    {
+      "experiment": {
+        "model": "mamba",
+        "pos_encoding": "sine",
+        "tokenizer": "bpe",
+        "quantize": null,
+        "description": "Mamba\u6a21\u578b"
+      },
+      "success": true,
+      "result": {
+        "model": "mamba",
+        "pos_encoding": null,
+        "tokenizer": "bpe",
+        "quantize": null,
+        "device": "cpu",
+        "batch_size": 8,
+        "epochs": 5,
+        "d_model": 128,
+        "num_layers": 2,
+        "final_test_loss": 5.183962821960449,
+        "training_time_seconds": 10.832487344741821,
+        "memory_usage_mb": 0,
+        "inference_time_ms": 4.872798919677734,
+        "train_losses": [
+          5.640046813271263,
+          5.487004496834495,
+          5.354837374253706,
+          5.227697372436523,
+          5.101170019669966
+        ],
+        "test_losses": [
+          5.579381465911865,
+          5.461453437805176,
+          5.363059043884277,
+          5.267488479614258,
+          5.183962821960449
+        ]
+      }
+    }
+  ]
+}

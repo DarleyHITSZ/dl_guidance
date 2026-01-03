@@ -1,0 +1,143 @@
+=== 模型训练开始 ===
+模型类型: min_gru
+序列长度: 30     
+批次大小: 32     
+隐藏层大小: 128  
+学习率: 0.001    
+训练轮数: 10     
+股票代码: AAPL   
+特征列: ['Close']
+==============================
+加载数据...
+Loading existing data from data\AAPL.csv
+Detected special CSV format, skipping invalid rows...
+数据加载完成
+训练批次数量: 87
+测试批次数量: 21
+输入维度: 1
+==============================
+初始化模型...
+模型初始化完成
+Epoch 1 - Train Loss: 0.015258 - Val Loss: 0.305797 - Time: 2.17s
+
+Epoch 2/10
+  Batch 10/87 - Loss: 0.023618
+  Batch 20/87 - Loss: 0.005051
+  Batch 30/87 - Loss: 0.003402
+  Batch 40/87 - Loss: 0.000190
+  Batch 50/87 - Loss: 0.000356
+  Batch 60/87 - Loss: 0.003036
+  Batch 70/87 - Loss: 0.001840
+  Batch 80/87 - Loss: 0.018906
+  Batch 87/87 - Loss: 0.165113
+Epoch 2 - Train Loss: 0.018366 - Val Loss: 0.290667 - Time: 2.18s
+
+Epoch 3/10
+  Batch 10/87 - Loss: 0.026691
+  Batch 20/87 - Loss: 0.006095
+  Batch 30/87 - Loss: 0.004014
+  Batch 40/87 - Loss: 0.000108
+  Batch 50/87 - Loss: 0.000461
+  Batch 60/87 - Loss: 0.002823
+  Batch 70/87 - Loss: 0.001726
+  Batch 80/87 - Loss: 0.018589
+  Batch 87/87 - Loss: 0.164015
+Epoch 3 - Train Loss: 0.019086 - Val Loss: 0.289056 - Time: 2.17s
+
+Epoch 4/10
+  Batch 10/87 - Loss: 0.026809
+  Batch 20/87 - Loss: 0.006141
+  Batch 30/87 - Loss: 0.004039
+  Batch 40/87 - Loss: 0.000104
+  Batch 50/87 - Loss: 0.000465
+  Batch 60/87 - Loss: 0.002805
+  Batch 70/87 - Loss: 0.001715
+  Batch 80/87 - Loss: 0.018522
+  Batch 87/87 - Loss: 0.163493
+Epoch 4 - Train Loss: 0.019080 - Val Loss: 0.288166 - Time: 2.14s
+
+Epoch 5/10
+  Batch 10/87 - Loss: 0.026753
+  Batch 20/87 - Loss: 0.006128
+  Batch 30/87 - Loss: 0.004028
+  Batch 40/87 - Loss: 0.000104
+  Batch 50/87 - Loss: 0.000464
+  Batch 60/87 - Loss: 0.002797
+  Batch 70/87 - Loss: 0.001709
+  Batch 80/87 - Loss: 0.018465
+  Batch 87/87 - Loss: 0.162975
+Epoch 5 - Train Loss: 0.019030 - Val Loss: 0.287269 - Time: 2.22s
+
+Epoch 6/10
+  Batch 10/87 - Loss: 0.026685
+  Batch 20/87 - Loss: 0.006109
+  Batch 30/87 - Loss: 0.004014
+  Batch 40/87 - Loss: 0.000104
+  Batch 50/87 - Loss: 0.000462
+  Batch 60/87 - Loss: 0.002790
+  Batch 70/87 - Loss: 0.001704
+  Batch 80/87 - Loss: 0.018406
+  Batch 87/87 - Loss: 0.162426
+Epoch 6 - Train Loss: 0.018974 - Val Loss: 0.286317 - Time: 2.18s
+
+Epoch 7/10
+  Batch 10/87 - Loss: 0.026615
+  Batch 20/87 - Loss: 0.006090
+  Batch 30/87 - Loss: 0.003999
+  Batch 40/87 - Loss: 0.000104
+  Batch 50/87 - Loss: 0.000460
+  Batch 60/87 - Loss: 0.002783
+  Batch 70/87 - Loss: 0.001697
+  Batch 80/87 - Loss: 0.018342
+  Batch 87/87 - Loss: 0.161836
+Epoch 7 - Train Loss: 0.018916 - Val Loss: 0.285298 - Time: 2.21s
+
+Epoch 8/10
+  Batch 10/87 - Loss: 0.026542
+  Batch 20/87 - Loss: 0.006069
+  Batch 30/87 - Loss: 0.003983
+  Batch 40/87 - Loss: 0.000105
+  Batch 50/87 - Loss: 0.000458
+  Batch 60/87 - Loss: 0.002775
+  Batch 70/87 - Loss: 0.001691
+  Batch 80/87 - Loss: 0.018273
+  Batch 87/87 - Loss: 0.161202
+Epoch 8 - Train Loss: 0.018853 - Val Loss: 0.284201 - Time: 2.17s
+
+Epoch 9/10
+  Batch 10/87 - Loss: 0.026465
+  Batch 20/87 - Loss: 0.006047
+  Batch 30/87 - Loss: 0.003966
+  Batch 40/87 - Loss: 0.000105
+  Batch 50/87 - Loss: 0.000455
+  Batch 60/87 - Loss: 0.002767
+  Batch 70/87 - Loss: 0.001684
+  Batch 80/87 - Loss: 0.018199
+  Batch 87/87 - Loss: 0.160516
+Epoch 9 - Train Loss: 0.018787 - Val Loss: 0.283017 - Time: 2.16s
+
+Epoch 10/10
+  Batch 10/87 - Loss: 0.026384
+  Batch 20/87 - Loss: 0.006023
+  Batch 30/87 - Loss: 0.003947
+  Batch 40/87 - Loss: 0.000105
+  Batch 50/87 - Loss: 0.000452
+  Batch 60/87 - Loss: 0.002759
+  Batch 70/87 - Loss: 0.001676
+  Batch 80/87 - Loss: 0.018119
+  Batch 87/87 - Loss: 0.159772
+Epoch 10 - Train Loss: 0.018716 - Val Loss: 0.281734 - Time: 2.13s
+
+==============================
+=== 模型训练完成 ===
+总训练时间: 21.72s
+最终训练损失: 0.018716
+最终验证损失: 0.281734
+
+=== 模型性能评估 ===
+MSE: 10223.84
+RMSE: 101.11
+MAE: 99.52
+R2: -30.0661
+
+结果可视化已保存到 min_gru_results.png

@@ -4,8 +4,7 @@ import tensorflow as tf
 import time
 import os
 
-# 设置TensorFlow镜像源以加速下载
-os.environ['TFDS_DATA_DIR'] = 'D:/tensorflow_datasets'
+
 
 # ------------------------------
 # 激活函数

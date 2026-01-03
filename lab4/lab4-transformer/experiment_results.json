@@ -1,0 +1,360 @@
+[
+  {
+    "model": "transformer",
+    "pos_encoding": "sine",
+    "tokenizer": "bpe",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 8,
+    "epochs": 1,
+    "d_model": 256,
+    "num_layers": 2,
+    "final_test_loss": 5.1164751052856445,
+    "training_time_seconds": 0.3889601230621338,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 3.1769275665283203,
+    "train_losses": [
+      5.41477818922563
+    ],
+    "test_losses": [
+      5.1164751052856445
+    ]
+  },
+  {
+    "model": "transformer",
+    "pos_encoding": "sine",
+    "tokenizer": "bpe",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 8,
+    "epochs": 5,
+    "d_model": 128,
+    "num_layers": 2,
+    "final_test_loss": 4.837854862213135,
+    "training_time_seconds": 1.031926155090332,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 2.0542144775390625,
+    "train_losses": [
+      5.6343488693237305,
+      5.154242212122137,
+      4.992679899389094,
+      4.841080275448886,
+      4.680593013763428
+    ],
+    "test_losses": [
+      5.38846492767334,
+      5.190020561218262,
+      5.095874786376953,
+      4.953930854797363,
+      4.837854862213135
+    ]
+  },
+  {
+    "model": "mamba",
+    "pos_encoding": null,
+    "tokenizer": "bpe",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 8,
+    "epochs": 5,
+    "d_model": 128,
+    "num_layers": 2,
+    "final_test_loss": 5.186402320861816,
+    "training_time_seconds": 12.904731035232544,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 5.36799430847168,
+    "train_losses": [
+      5.64737588709051,
+      5.482893640344793,
+      5.339759783311323,
+      5.216769045049494,
+      5.097668387673118
+    ],
+    "test_losses": [
+      5.588907718658447,
+      5.468456268310547,
+      5.369355201721191,
+      5.273199081420898,
+      5.186402320861816
+    ]
+  },
+  {
+    "model": "transformer",
+    "pos_encoding": "sine",
+    "tokenizer": "bpe",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 8,
+    "epochs": 5,
+    "d_model": 128,
+    "num_layers": 2,
+    "final_test_loss": 4.664111137390137,
+    "training_time_seconds": 1.0157525539398193,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 1.628875732421875,
+    "train_losses": [
+      5.778705726970326,
+      5.259715383703059,
+      4.993409286845814,
+      4.7641846483403985,
+      4.5234863541343
+    ],
+    "test_losses": [
+      5.413226127624512,
+      5.2163872718811035,
+      5.088966369628906,
+      4.8917059898376465,
+      4.664111137390137
+    ]
+  },
+  {
+    "model": "mamba",
+    "pos_encoding": null,
+    "tokenizer": "bpe",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 8,
+    "epochs": 5,
+    "d_model": 128,
+    "num_layers": 2,
+    "final_test_loss": 5.188384056091309,
+    "training_time_seconds": 10.365198135375977,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 4.980564117431641,
+    "train_losses": [
+      5.650057836012407,
+      5.493662227283824,
+      5.351407311179421,
+      5.223280603235418,
+      5.096441615711559
+    ],
+    "test_losses": [
+      5.6142683029174805,
+      5.490499973297119,
+      5.38327169418335,
+      5.282508373260498,
+      5.188384056091309
+    ]
+  },
+  {
+    "model": "transformer",
+    "pos_encoding": "rope",
+    "tokenizer": "bpe",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 4,
+    "epochs": 1,
+    "d_model": 64,
+    "num_layers": 1,
+    "final_test_loss": 5.623746156692505,
+    "training_time_seconds": 0.2261967658996582,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 1.3077259063720703,
+    "train_losses": [
+      5.695454779125395
+    ],
+    "test_losses": [
+      5.623746156692505
+    ]
+  },
+  {
+    "model": "transformer",
+    "pos_encoding": "sine",
+    "tokenizer": "sentencepiece",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 4,
+    "epochs": 1,
+    "d_model": 64,
+    "num_layers": 1,
+    "final_test_loss": 3.762501835823059,
+    "training_time_seconds": 0.262911319732666,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 1.4393329620361328,
+    "train_losses": [
+      4.014506567092169
+    ],
+    "test_losses": [
+      3.762501835823059
+    ]
+  },
+  {
+    "model": "transformer",
+    "pos_encoding": "sine",
+    "tokenizer": "bpe",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 4,
+    "epochs": 1,
+    "d_model": 64,
+    "num_layers": 1,
+    "final_test_loss": 5.663354158401489,
+    "training_time_seconds": 0.2019941806793213,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 1.2426376342773438,
+    "train_losses": [
+      5.8579595656622026
+    ],
+    "test_losses": [
+      5.663354158401489
+    ]
+  },
+  {
+    "model": "transformer",
+    "pos_encoding": "rope",
+    "tokenizer": "bpe",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 4,
+    "epochs": 1,
+    "d_model": 64,
+    "num_layers": 1,
+    "final_test_loss": 5.691573858261108,
+    "training_time_seconds": 0.18126654624938965,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 1.2598037719726562,
+    "train_losses": [
+      5.838717142740886
+    ],
+    "test_losses": [
+      5.691573858261108
+    ]
+  },
+  {
+    "model": "transformer",
+    "pos_encoding": "sine",
+    "tokenizer": "bpe",
+    "quantize": "int8",
+    "device": "cpu",
+    "batch_size": 4,
+    "epochs": 1,
+    "d_model": 64,
+    "num_layers": 1,
+    "final_test_loss": 5.665364980697632,
+    "training_time_seconds": 0.21680450439453125,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 4.374980926513672,
+    "train_losses": [
+      5.798378126961844
+    ],
+    "test_losses": [
+      5.665053129196167
+    ]
+  },
+  {
+    "model": "transformer",
+    "pos_encoding": "sine",
+    "tokenizer": "bpe",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 8,
+    "epochs": 5,
+    "d_model": 128,
+    "num_layers": 2,
+    "final_test_loss": 4.783655643463135,
+    "training_time_seconds": 1.1232123374938965,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 2.151966094970703,
+    "train_losses": [
+      5.596295400099321,
+      5.100722703066739,
+      4.872477141293612,
+      4.701233993877064,
+      4.580686655911532
+    ],
+    "test_losses": [
+      5.431977272033691,
+      5.211141586303711,
+      5.060032367706299,
+      4.9464945793151855,
+      4.783655643463135
+    ]
+  },
+  {
+    "model": "transformer",
+    "pos_encoding": "rope",
+    "tokenizer": "bpe",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 8,
+    "epochs": 5,
+    "d_model": 128,
+    "num_layers": 2,
+    "final_test_loss": 4.621060371398926,
+    "training_time_seconds": 1.1385235786437988,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 2.2056102752685547,
+    "train_losses": [
+      5.607710838317871,
+      5.103710261258212,
+      4.840125344016335,
+      4.581111474470659,
+      4.314731988039884
+    ],
+    "test_losses": [
+      5.417725563049316,
+      5.232909202575684,
+      5.055157661437988,
+      4.842175006866455,
+      4.621060371398926
+    ]
+  },
+  {
+    "model": "transformer",
+    "pos_encoding": "sine",
+    "tokenizer": "sentencepiece",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 8,
+    "epochs": 5,
+    "d_model": 128,
+    "num_layers": 2,
+    "final_test_loss": 3.0780105590820312,
+    "training_time_seconds": 1.766345500946045,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 2.558469772338867,
+    "train_losses": [
+      4.032426639036699,
+      3.515760378404097,
+      3.3163633129813452,
+      3.2423231168226763,
+      3.1255099556662818
+    ],
+    "test_losses": [
+      3.4995555877685547,
+      3.356635332107544,
+      3.2593162059783936,
+      3.1656365394592285,
+      3.0780105590820312
+    ]
+  },
+  {
+    "model": "mamba",
+    "pos_encoding": null,
+    "tokenizer": "bpe",
+    "quantize": null,
+    "device": "cpu",
+    "batch_size": 8,
+    "epochs": 5,
+    "d_model": 128,
+    "num_layers": 2,
+    "final_test_loss": 5.183962821960449,
+    "training_time_seconds": 10.832487344741821,
+    "memory_usage_mb": 0,
+    "inference_time_ms": 4.872798919677734,
+    "train_losses": [
+      5.640046813271263,
+      5.487004496834495,
+      5.354837374253706,
+      5.227697372436523,
+      5.101170019669966
+    ],
+    "test_losses": [
+      5.579381465911865,
+      5.461453437805176,
+      5.363059043884277,
+      5.267488479614258,
+      5.183962821960449
+    ]
+  }
+]

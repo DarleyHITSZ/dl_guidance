@@ -1,0 +1,155 @@
+=== 模型训练开始 ===
+模型类型: mamba
+序列长度: 30   
+批次大小: 32   
+隐藏层大小: 128
+学习率: 0.001  
+训练轮数: 10   
+股票代码: AAPL 
+特征列: ['Close']
+==============================
+加载数据...
+Loading existing data from data\AAPL.csv
+Detected special CSV format, skipping invalid rows...
+数据加载完成
+训练批次数量: 87
+测试批次数量: 21
+输入维度: 1
+==============================
+初始化模型...
+模型初始化完成
+==============================
+
+Epoch 1/10
+  Batch 10/87 - Loss: 0.000377
+  Batch 20/87 - Loss: 0.002758
+  Batch 30/87 - Loss: 0.000725
+  Batch 40/87 - Loss: 0.005335
+  Batch 50/87 - Loss: 0.000292
+  Batch 60/87 - Loss: 0.006272
+  Batch 70/87 - Loss: 0.002268
+  Batch 80/87 - Loss: 0.017543
+  Batch 87/87 - Loss: 0.140452
+Epoch 1 - Train Loss: 0.012615 - Val Loss: 0.252059 - Time: 2.03s
+
+Epoch 2/10
+  Batch 10/87 - Loss: 0.031240
+  Batch 20/87 - Loss: 0.004915
+  Batch 30/87 - Loss: 0.002341
+  Batch 40/87 - Loss: 0.000620
+  Batch 50/87 - Loss: 0.000163
+  Batch 60/87 - Loss: 0.003419
+  Batch 70/87 - Loss: 0.001214
+  Batch 80/87 - Loss: 0.014227
+  Batch 87/87 - Loss: 0.122720
+Epoch 2 - Train Loss: 0.018598 - Val Loss: 0.222404 - Time: 2.02s
+
+Epoch 3/10
+  Batch 10/87 - Loss: 0.029768
+  Batch 20/87 - Loss: 0.004739
+  Batch 30/87 - Loss: 0.002217
+  Batch 40/87 - Loss: 0.000539
+  Batch 50/87 - Loss: 0.000157
+  Batch 60/87 - Loss: 0.003058
+  Batch 70/87 - Loss: 0.001054
+  Batch 80/87 - Loss: 0.012618
+  Batch 87/87 - Loss: 0.107687
+Epoch 3 - Train Loss: 0.017113 - Val Loss: 0.195192 - Time: 1.99s
+
+Epoch 4/10
+  Batch 10/87 - Loss: 0.026834
+  Batch 20/87 - Loss: 0.004274
+  Batch 30/87 - Loss: 0.001983
+  Batch 40/87 - Loss: 0.000479
+  Batch 50/87 - Loss: 0.000142
+  Batch 60/87 - Loss: 0.002699
+  Batch 70/87 - Loss: 0.000896
+  Batch 80/87 - Loss: 0.010937
+  Batch 87/87 - Loss: 0.091204
+Epoch 4 - Train Loss: 0.015141 - Val Loss: 0.165017 - Time: 1.97s
+
+Epoch 5/10
+  Batch 10/87 - Loss: 0.023643
+  Batch 20/87 - Loss: 0.003788
+  Batch 30/87 - Loss: 0.001742
+  Batch 40/87 - Loss: 0.000410
+  Batch 50/87 - Loss: 0.000128
+  Batch 60/87 - Loss: 0.002305
+  Batch 70/87 - Loss: 0.000713
+  Batch 80/87 - Loss: 0.009027
+  Batch 87/87 - Loss: 0.071842
+Epoch 5 - Train Loss: 0.012939 - Val Loss: 0.129473 - Time: 2.02s
+
+Epoch 6/10
+  Batch 10/87 - Loss: 0.020099
+  Batch 20/87 - Loss: 0.003265
+  Batch 30/87 - Loss: 0.001479
+  Batch 40/87 - Loss: 0.000328
+  Batch 50/87 - Loss: 0.000115
+  Batch 60/87 - Loss: 0.001847
+  Batch 70/87 - Loss: 0.000488
+  Batch 80/87 - Loss: 0.006777
+  Batch 87/87 - Loss: 0.052367
+Epoch 6 - Train Loss: 0.010518 - Val Loss: 0.094701 - Time: 1.95s
+
+Epoch 7/10
+  Batch 10/87 - Loss: 0.016054
+  Batch 20/87 - Loss: 0.002635
+  Batch 30/87 - Loss: 0.001172
+  Batch 40/87 - Loss: 0.000255
+  Batch 50/87 - Loss: 0.000098
+  Batch 60/87 - Loss: 0.001388
+  Batch 70/87 - Loss: 0.000280
+  Batch 80/87 - Loss: 0.004647
+  Batch 87/87 - Loss: 0.033480
+Epoch 7 - Train Loss: 0.007977 - Val Loss: 0.061234 - Time: 1.97s
+
+Epoch 8/10
+  Batch 10/87 - Loss: 0.011953
+  Batch 20/87 - Loss: 0.001993
+  Batch 30/87 - Loss: 0.000862
+  Batch 40/87 - Loss: 0.000183
+  Batch 50/87 - Loss: 0.000081
+  Batch 60/87 - Loss: 0.000940
+  Batch 70/87 - Loss: 0.000118
+  Batch 80/87 - Loss: 0.002700
+  Batch 87/87 - Loss: 0.017938
+Epoch 8 - Train Loss: 0.005550 - Val Loss: 0.033998 - Time: 1.98s
+
+Epoch 9/10
+  Batch 10/87 - Loss: 0.008005
+  Batch 20/87 - Loss: 0.001355
+  Batch 30/87 - Loss: 0.000563
+  Batch 40/87 - Loss: 0.000125
+  Batch 50/87 - Loss: 0.000063
+  Batch 60/87 - Loss: 0.000560
+  Batch 70/87 - Loss: 0.000046
+  Batch 80/87 - Loss: 0.001348
+  Batch 87/87 - Loss: 0.007959
+Epoch 9 - Train Loss: 0.003471 - Val Loss: 0.015898 - Time: 2.03s
+
+Epoch 10/10
+  Batch 10/87 - Loss: 0.004718
+  Batch 20/87 - Loss: 0.000805
+  Batch 30/87 - Loss: 0.000317
+  Batch 40/87 - Loss: 0.000085
+  Batch 50/87 - Loss: 0.000047
+  Batch 60/87 - Loss: 0.000290
+  Batch 70/87 - Loss: 0.000074
+  Batch 80/87 - Loss: 0.000701
+  Batch 87/87 - Loss: 0.003017
+Epoch 10 - Train Loss: 0.001949 - Val Loss: 0.006572 - Time: 2.00s
+
+==============================
+=== 模型训练完成 ===
+总训练时间: 19.96s
+最终训练损失: 0.001949
+最终验证损失: 0.006572
+
+=== 模型性能评估 ===
+MSE: 238.49
+RMSE: 15.44
+MAE: 14.07
+R2: 0.2753
+
+结果可视化已保存到 mamba_results.png
